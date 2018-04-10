@@ -12,12 +12,15 @@
     "lint": "eslint --ext .js,.vue src test/unit",
     "build:prod": "cross-env NODE_ENV=production node build/build.js",
     "build:beta": "cross-env NODE_ENV=beta node build/build.js",
+    "build:uat": "cross-env NODE_ENV=uat node build/build.js",
     "build": "npm run build:prod"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "apollo-client": "^2.2.8",
     "element-ui": "^2.3.3",
+    "graphql-tag": "^2.8.0",
     "vue": "^2.5.2",
+    "vue-apollo": "^3.0.0-beta.5",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },

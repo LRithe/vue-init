@@ -44,14 +44,14 @@ module.exports = {
   },
 
   build: {
-    env: process.env.NODE_ENV === 'production' ? require('./prod.env') : require('./beta.env'),
+    env: process.env.NODE_ENV === 'production' ? require('./prod.env') : ( process.env.NODE_ENV === 'beta' ? require('./beta.env') : require('./uat.env')),
     // Template for index.html
     index: path.resolve(__dirname, '../dist/index.html'),
 
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: './',
 
     /**
      * Source Maps
